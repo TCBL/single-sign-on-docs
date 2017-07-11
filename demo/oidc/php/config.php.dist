@@ -1,0 +1,27 @@
+<?php
+
+// === URL of the OpenID Connect Provider (OP)
+// TODO: set to the URL of the OP of your choice
+const OP = 'https://your-op.com';
+
+// === URL the OP must redirect to
+// TODO: set to the absolute URL of the page to redirect to after successful login
+const REDIRECT_URL = 'https://your-app-path/client_example.php';
+
+// === Client name of this demo
+// TODO: set to the name the OP will use for this client
+const CLIENT_NAME = 'your OpenID Connect PHP demo client';
+
+// === Client id
+// TODO: set to the value printed for CLIENT_ID by register_client.php at completion of the dynamic client registration
+const CLIENT_ID = 'your client id';
+
+// === Client secret
+// TODO: set to the value printed for CLIENT_SECRET by register_client.php at completion of the dynamic client registration
+const CLIENT_SECRET = 'your client secret';
+
+// === Scopes needed in this demo
+// - scope 'openid' is obligatory for OpenID Connect to work!
+// - other scopes are client application dependent
+// TODO: modify if needed and make sure these scopes are enabled for this client at the OP
+const SCOPES = array('openid', 'minimum');
