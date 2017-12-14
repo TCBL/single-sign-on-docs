@@ -6,6 +6,13 @@
 require 'vendor/autoload.php';
 require 'config.php';
 
+// Avoid unintended or malicious re-registration
+// For intended registration, CLIENT_ID must be empty in config.php
+if (!empty(CLIENT_ID)) {
+        print('<h2>Dynamic client registration was completed earlier. CLIENT_ID allready known!</h2>');
+        die();
+}
+
 // Initialize client object, set OP URL, redirect URL and name of the client app.
 $oidc = new OpenIDConnectClient(OP);
 $oidc->setRedirectURL(REDIRECT_URL);
