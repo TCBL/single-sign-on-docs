@@ -12,7 +12,7 @@ $oidc = new OpenIDConnectClient(OP, CLIENT_ID, CLIENT_SECRET);
 $oidc->setRedirectURL(REDIRECT_URL);
 
 // Prepare authentication
-$prompt = array('prompt' => 'consent', 'display' => 'page');
+$prompt = array('display' => 'page');
 $oidc->addAuthParam($prompt);
 
 // Scopes to be authorized by the end-user
