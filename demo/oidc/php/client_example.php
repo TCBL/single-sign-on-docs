@@ -44,7 +44,10 @@ foreach (get_object_vars($userinfo) as $key => $value) {
 print('</dl>');
 ?>
 </p>
-<p><a href="index.html">Back</a>
+<p>
+[<a href="index.html">Back</a>]
+[<a href="logout.php?accessToken=<?php echo $oidc->getAccessToken(); ?>">Logout</a>]
+</p>
 </body>
 </html>
 

@@ -8,6 +8,10 @@ const OP = 'https://your-op.com';
 // TODO: set to the absolute URL of the page to redirect to after successful login
 const REDIRECT_URL = 'https://your-app-path/client_example.php';
 
+// === URL the OP must redirect to after logout
+// TODO: set to the absolute URL of the page to redirect to after successful logout
+const LOGOUT_REDIRECT_URL = 'https://your-app-path';
+
 // === Client name of this demo
 // TODO: set to the name the OP will use for this client
 const CLIENT_NAME = 'temptemptemp OpenID Connect PHP demo client';
