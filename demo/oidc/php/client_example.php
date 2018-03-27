@@ -31,6 +31,15 @@ $userinfo = $oidc->requestUserInfo();
 <html>
 <head>
     <title>OpenID Connect PHP client demo</title>
+    <script type="text/javascript">
+        window.onload = function() {
+          var a = document.getElementById("logoutlink");
+          a.onclick = function() {
+            document.getElementById("logoutform").submit();
+            return false;
+          }
+        }
+    </script>
 </head>
 <body>
 <h2>OpenID Connect PHP client demo</h2>
@@ -46,8 +55,11 @@ print('</dl>');
 </p>
 <p>
 [<a href="index.html">Back</a>]
-[<a href="logout.php?accessToken=<?php echo $oidc->getAccessToken(); ?>">Logout</a>]
+[<a href="#" id="logoutlink">Logout</a>]
 </p>
+<form style="display:none" name="logoutform" id="logoutform" action="logout.php" method="POST">
+    <input type="hidden" name="accessToken" value="<?php echo $oidc->getAccessToken(); ?>" />
+</form>
 </body>
 </html>
 
