@@ -34,12 +34,17 @@ print('<dt>CLIENT_ID</dt><dd>' . $client_id . '</dd>');
 print('<dt>CLIENT_SECRET</dt><dd>' . $client_secret . '</dd>');
 print('</dl>');
 
-print('<h3>Please also contact the OP server admin to make sure the following scopes are enabled for this client:</h3>');
+print('<h3>Please also contact the OP server admin to adapt the following settings for this client:</h3>');
+print('<ol>');
+print('<li>Enabled scopes');
 print('<ul>');
 foreach (SCOPES as $scope) {
         print('<li>' . $scope . '</li>');
 }
-print('</ul>');
+print('</ul></li>');
+print('<li>Logout redirect URI');
+print('<ul><li>' . LOGOUT_REDIRECT_URL . '</li></ul>');
+print('</ol>');
 
 ?>
 </body>
