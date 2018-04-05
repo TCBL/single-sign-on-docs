@@ -28,4 +28,4 @@ const CLIENT_SECRET = '';
 // - scope 'openid' is obligatory for OpenID Connect to work!
 // - other scopes are client application dependent
 // TODO: modify if needed and make sure these scopes are enabled for this client at the OP
-const SCOPES = array('openid', 'minimum', 'extended', 'tcblinfo');
+const SCOPES = array('openid', 'minimum', 'extended', 'tcblactivity', 'tcblinfo');
